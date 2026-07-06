@@ -39,7 +39,7 @@ class Solution {
             for (int j = 0; j < n; j++) {
                 if (grid[i][j] == 1) {
                     int[] area = new int[1];
-                    maxArea = Math.max(maxArea, dfs(grid, i, j, m, n, area));
+                    dfs(grid, i, j, m, n, area);
                     maxArea = Math.max(maxArea, area[0]);
                 }
             }
@@ -47,24 +47,21 @@ class Solution {
         return maxArea;
     }
 
-    private int dfs(int[][] grid, int r, int c, int m, int n, int[] area) {
+    private void dfs(int[][] grid, int r, int c, int m, int n, int[] area) {
         // Base case: boundaries and water check
         if (r < 0 || r >= m || c < 0 || c >= n || grid[r][c] == 0) {
-            return 0;
+            return;
         }
 
-        // Mark as visited
         grid[r][c] = 0;
-        // Count current cell
         area[0] ++;
 
-        dfs(grid, r - 1, c, m, n, area)  // Up
-        dfs(grid, r + 1, c, m, n, area)  // Down
-        dfs(grid, r, c - 1, m, n, area)  // Left
+        dfs(grid, r - 1, c, m, n, area); // Up
+        dfs(grid, r + 1, c, m, n, area); // Down
+        dfs(grid, r, c - 1, m, n, area); // Left
         dfs(grid, r, c + 1, m, n, area); // Right
     }
 }
-
 ```
 
 #### C++
