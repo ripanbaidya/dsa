@@ -1,6 +1,6 @@
 ## BFS - Breadth First Search
 
-Here is a quick, highly scannable revision guide for **BFS of a Graph** tailored to help you revise the concept and implementation in under 2 minutes.
+<p align="right">Last updated - 08.07.2026</p>
 
 ## Intuition
 
