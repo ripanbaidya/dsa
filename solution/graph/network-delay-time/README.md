@@ -28,8 +28,8 @@ Dijkstra's algorithm works greedily. It always expands the reach of the node tha
    - Pop the node with the minimum arrival time from the heap. Let's call this node `u` with current arrival time `time`.
    - If this popped `time` is greater than the already recorded `shortestTime[u]`, skip it (it's a stale path).
    - For each neighbor `v` of `u` connected by weight `w`:
-     - Calculate the potential arrival time at `v`: $\text{new\_time} = \text{time} + w$.
-     - If $\text{new\_time}$ is strictly less than the currently recorded `shortestTime[v]`, we update `shortestTime[v]` and push `{new_time, v}` to our heap.
+     - Calculate the potential arrival time at `v`: `new_time = time + w`
+     - If `new_time` is strictly less than the currently recorded `shortestTime[v]`, we update `shortestTime[v]` and push `{new_time, v}` to our heap.
 
 5. **Get the Result:** After processing, find the maximum value in our `shortestTime` array (ignoring index `0`). If any node's shortest time remains "infinity", it means the signal never reached it—return `-1`. Otherwise, return that maximum value.
 
