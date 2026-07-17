@@ -1,6 +1,6 @@
-# Dijkstra Algorithm
+# [Dijkstra Algorithm](https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1)
 
-<p align="right">Last updated - 16.07.2026</p>
+<p align="right">Last updated - 17.07.2026</p>
 
 Whether you are navigating a map, routing data packets across the internet, or trying to find the quickest path to complete a video game quest, you are likely relying on **Dijkstra's Algorithm**.
 
@@ -111,3 +111,9 @@ Let $V$ be the number of vertices (nodes) and $E$ be the number of edges.
 - **Space Complexity:** $\mathcal{O}(V + E)$
   - $\mathcal{O}(V)$ for the `distances` array and the Priority Queue (which holds at most $V$ valid unique elements at any given point).
   - $\mathcal{O}(V + E)$ to store the graph adjacency list representation.
+
+## References
+
+- Practice - https://www.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1
+- Implementation Using PriorityQueue (MinHeap) - https://youtu.be/V6H1qAeB-l4?si=x9XVs4qGgSk8p1DL
+- Detailed Complexity Analysis - https://youtu.be/3dINsjyfooY?si=JzrYLR9JvKLHT0Mx
