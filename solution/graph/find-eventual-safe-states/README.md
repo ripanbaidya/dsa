@@ -2,7 +2,7 @@
 
 <p align="right">Last updated - 14.07.2026</p>
 
-##
+## Approach: Topological Sort
 
 ### The Core Concept: Why Reverse the Graph?
 
