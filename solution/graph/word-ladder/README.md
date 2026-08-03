@@ -87,10 +87,9 @@ class Solution {
                 return currSteps;
             }
 
-            char[] charArr = currWord.toCharArray();
             // Try changing each character position
-            for (int i = 0; i < charArr.length; i++) {
-                char originalChar = charArr[i];
+            for (int i = 0; i < currWord.length(); i++) {
+                char[] charArr = currWord.toCharArray();
 
                 // Try all 26 possible lowercase English alphabets
                 for (char c = 'a'; c <= 'z'; c++) {
@@ -104,8 +103,6 @@ class Solution {
                         set.remove(newWord);
                     }
                 }
-                // Restore the original character for the next position's transformations
-                charArr[i] = originalChar;
             }
         }
 
